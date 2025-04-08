@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/nav.astro';
+import Titol from '../components/Titol.astro';
+import Footer from '../components/footer.astro';
+import cvdata from '../data/cv.json';
+---
+
+<Layout>
+  <Nav />
+  <Titol text="ELS MEUS PROJECTES" />
+  <section class="experience">
+    
+    <div class="job">
+      {
+        cvdata.projects.map((project) => (
+          
+            
+            <a class="link" href={`/projectes/${project.slug}`}>
+              
+              <h2>
+                {project.id} -
+                {project.slug}
+              </h2>
+            </a>
+          
+        ))
+      }
+    </div>
+    
+</section>
+  <Footer />
+</Layout>
+
+<style>
+    .experience {
+      font-family: sans-serif;
+      width: 70%;
+      margin: 0 auto;
+     
+    }
+  
+   
+    .job {
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+  
+    .link{
+        margin: 30px;
+        color: black;
+        text-decoration: none;
+    }
+
+    h2{
+      font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0;
+    color: #222;
+    }
+
+  </style>

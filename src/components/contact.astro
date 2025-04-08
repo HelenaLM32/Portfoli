@@ -1,0 +1,70 @@
+---
+import cvdata from "../data/cv.json";
+---
+
+<div class="contenedor">
+  <p>
+    If you'd like to get in touch, you can reach me using the following methods. Please note, that I'm not currently available for freelance projects.
+  </p>
+  <div class="contacts-grid">
+    {Object.entries(cvdata.contact).map(([platform, handle]) => (
+      handle.startsWith("https") ? (
+      <a
+        
+        href={handle}
+        ><div class="column"><h3>{platform}</h3>
+        <p>{handle}</p></div>
+        </a>) : (
+          <div class="column"><h3>{platform}</h3>
+            <p>{handle}</p></div>
+         
+        )
+    ))}
+  </div>
+</div>
+
+<style>
+
+  .column{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts-grid a{
+    text-decoration: none;
+    color: black;
+  }
+
+  .contenedor{
+    width: 70%;
+  }
+  .contenedor p{
+    font-size: 1rem;
+    font-family: sans-serif;
+  }
+
+  h3{
+    font-size: 1rem;
+    font-family: sans-serif;
+  }
+
+  .contacts-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin: 0 auto;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  @media (max-width: 768px) {
+    .contacts-grid {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contenedor p{
+      font-size: 0.7rem;
+    }
+  }
+</style>

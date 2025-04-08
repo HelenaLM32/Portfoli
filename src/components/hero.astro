@@ -1,0 +1,65 @@
+---
+import cvData from "../data/cv.json";
+
+const { name, title, profile_summary } = cvData;
+---
+
+<section class="hero">
+  
+    <h1>{name}</h1>
+    <h2>{title}</h2>
+    <p>{profile_summary}</p>
+  
+</section>
+
+<style>
+    .hero {
+      width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    }
+    
+    
+    h1 {
+        font-family: sans-serif;
+      font-size: 2rem;
+      
+    }
+    
+    
+    h2 {
+        font-family: sans-serif;
+      font-size: 1.2rem;
+      color: #999999;
+      margin-top: 0.5rem;
+    }
+    
+    p {
+        font-family: sans-serif;
+      font-size: 1rem;
+      color: #334155;
+      line-height: 1.6;
+      margin-top: 0.5rem;
+    }
+    
+    .hero-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #000;
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      
+    }
+    
+    @media (max-width: 1000px) {
+    p {
+    font-size: 0.7rem;
+    text-align: justify;
+   }
+  }
+    
+    </style>

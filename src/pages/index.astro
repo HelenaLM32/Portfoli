@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/nav.astro';
+import Footer from '../components/footer.astro';
+import Hero from '../components/hero.astro';
+import Boto from "../components/boto.astro";
+import Projects from "../components/projects.astro";
+
+// Importar les dades des del JSON
+
+---
+
+<Layout>
+  <Nav />
+  <Hero />
+  <Boto text="Més informació –>" href="/informacio" />
+  <Projects />
+  <Boto text="Tots els projectes –>" href="/projectes" />
+  <Footer />
+</Layout>
+
+

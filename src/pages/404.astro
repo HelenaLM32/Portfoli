@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pàgina no trobada - 404</title>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #020617;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        text-align: center;
+        padding: 50px;
+      }
+
+      h1 {
+        font-size: 120px;
+        font-weight: bold;
+        color: white;
+        margin: 0;
+      }
+
+      h2{
+        font-size: 50px;
+        font-weight: bold;
+        color: white;
+        margin: 0;
+      }
+      p {
+        font-size: 18px;
+        color: #bdbdbd;
+        margin-top: 20px;
+      }
+      .back-button {
+        font-size: 10px;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .link{
+        width: 25%;
+        height: 45%;
+      }
+      
+      @media (max-width: 768px) {
+        body {
+          display: flex;
+          flex-direction: column;
+        }
+        h1 {
+          font-size: 120px;
+        }
+        h2 {
+          font-size: 50px;
+        }
+        p {
+          font-size: 18px;
+        }
+        .back-button {
+          font-size: 16px;
+        }
+        .link {
+          width: 25%;
+          height: auto;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>404</h1>
+      <p>It looks like you found a</p><h2>DEAD LINK</h2>
+      <a href="/" class="back-button">Torna a la pàgina principal</a>
+    </div>
+    <img class="link" src="https://www.pinclipart.com/picdir/big/317-3178648_dlive-is-creating-a-graveyard-of-dead-links.png">
+  </body>
+</html>

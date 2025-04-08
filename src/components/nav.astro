@@ -1,0 +1,67 @@
+---
+--- 
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+
+<nav>
+  <ul>
+    <a href="http://localhost:4321/" class="logo">hl</a>
+    <li class="nav-links">
+      <a href="/informacio">Informació</a>
+      <a href="/contacte">Contacte</a>
+    </li>
+  </ul>
+</nav>
+
+<style>
+nav {
+  width: 70%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  font-family: monospace;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+
+.logo {
+  font-family: monospace;
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  
+  text-decoration: none;
+}
+
+@media (max-width: 1000px) {
+   ul{
+    display: flex;
+    flex-direction: column;
+   }
+
+   .nav-links{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+   }
+
+   
+  }
+
+</style>

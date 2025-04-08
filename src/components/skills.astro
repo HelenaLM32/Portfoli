@@ -1,0 +1,50 @@
+---
+import cvData from "../data/cv.json";
+
+const { skills } = cvData;
+const colors = ["gray", "black"];
+---
+
+<div class="skills-container">
+  <h1>Skills</h1>
+  <div class="skills-list">
+    {skills.map((skill, i) => (
+      <span class={`badge badge-${colors[i % colors.length]}`} data-key={i}>{skill}</span>
+    ))}
+  </div>
+</div>
+
+<style>
+  .skills-container {
+    width: 70%;
+    padding: 1.5rem;
+    font-family: sans-serif;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left;
+  }
+
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #333;
+    border: 2px solid #d1d5db;
+    transition: all 0.3s ease;
+  }
+  
+
+</style>

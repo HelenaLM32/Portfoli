@@ -1,0 +1,86 @@
+---
+interface Educacion {
+    degree: string;
+    institution: string;
+    year: string;
+    image: string;
+}
+
+const { education } = Astro.props;
+---
+
+<section class="education">
+  <div>
+    <h1>Formació</h1>
+    {education.map((education: Educacion) => (
+      
+        <div class="job-header">
+          <img class="image" src={education.image}/>
+          <div class="job-info">
+            <h2>{education.degree}</h2>
+            <p class="institution">{education.institution}</p>
+            <p class="año">{education.year}</p>
+          </div>
+        </div>
+    ))}
+  </div>
+</section>
+
+<style>
+
+  .image{
+    width: 130px;
+    height: 80px;
+  }
+  .education {
+    width: 70%;
+    font-family: sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .job {
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .job-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 10px;
+  }
+
+
+  .job-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0;
+    color: #222;
+  }
+
+  .institution {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 4px;
+  }
+
+  .año {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 2px;
+  }
+
+</style>

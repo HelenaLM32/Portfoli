@@ -1,0 +1,31 @@
+---
+// src/components/Boto.astro
+export interface Props {
+  text: string;
+  href: string;
+}
+
+const { text, href } = Astro.props;
+---
+
+<a href={href} class="boto">{text}</a>
+
+<style>
+
+.boto {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  font-family: monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  background-color: #020617;
+  border-radius: 9999px;
+  text-decoration: none;
+  
+}
+
+
+</style>
+

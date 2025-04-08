@@ -1,0 +1,20 @@
+---
+// src/components/Titol.astro
+export interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<h1 class="titol">{text}</h1>
+
+<style>
+
+.titol {
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  width: 70%;
+  margin-top: 50px;
+}
+</style>

@@ -1,0 +1,97 @@
+---
+interface Job {
+  image: string;
+  position: string;
+  company: string;
+  duration: string;
+  responsibilities: string;
+}
+
+const { experience } = Astro.props;
+---
+
+<section class="experience">
+  <div>
+    <h1>Experience</h1>
+    {experience.map((job: Job) => (
+      <div class="job">
+        <div class="job-header">
+          <img class="job-image" src={job.image} alt={`Logo de ${job.company}`} />
+          <div class="job-info">
+            <h2>{job.company}</h2>
+            <p class="position">{job.position}</p>
+            <p class="duration">{job.duration}</p>
+          </div>
+        </div>
+        <div class="responsibilities">
+          <p>{job.responsibilities}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .experience {
+    font-family: sans-serif;
+    width: 70%;
+    margin: 0 auto;
+   
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .job {
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .job-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 10px;
+  }
+
+  .job-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    object-fit: cover;
+    
+  }
+
+  .job-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0;
+    color: #222;
+  }
+
+  .position {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 4px;
+  }
+
+  .duration {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 2px;
+  }
+
+  .responsibilities {
+    margin-top: 12px;
+    font-size: 1rem;
+    color: #444;
+  }
+</style>

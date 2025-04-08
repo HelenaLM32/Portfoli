@@ -1,0 +1,53 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/nav.astro';
+import Titol from '../../components/Titol.astro';
+import Footer from '../../components/footer.astro';
+import cvdata from '../../data/cv.json';
+
+
+export async function getStaticPaths() {
+ 
+  const paths = cvdata.projects.map((project) => ({
+    params: { slug: project.slug }, 
+  }));
+  return paths;
+}
+
+const { slug } = Astro.params;
+
+const project = cvdata.projects.find(
+  (project) => project.slug === slug
+);
+
+
+if (!project) {
+  throw new Error("Projecte no trobat");
+}
+---
+
+<Layout>
+  <Nav/>
+  <div class="project">
+    <h1>{project.name}</h1>
+    <img class="image" src={project.image} />
+    <p>{project.description}</p>
+  </div>
+  <Footer />
+</Layout>
+
+<style>
+
+    .project{
+    font-family: sans-serif;
+      width: 70%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .image{
+        width: 400px;
+        height: 300px;
+    }
+</style>

@@ -1,0 +1,83 @@
+---
+interface idioma {
+  language: string;
+  level: string;
+  image: string;
+}
+
+const { languages } = Astro.props;
+---
+
+<section class="contenedor">
+  <div>
+    <h1>Idiomas</h1>
+    <div class="contacts-list">
+      {languages.map((idioma: idioma) => (
+        <div class="contacts-grid">
+          <img class="image" src={idioma.image}/>
+          <h2>{idioma.language}</h2>
+          <p class="level">{idioma.level}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+
+  .image{
+    width: 20px;
+    height: 20px;
+  }
+  .contenedor {
+    width: 70%;
+    font-family: sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left;
+  }
+
+  .contacts-list {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .contacts-grid {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+  }
+
+  .contacts-grid h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #222;
+    margin: 0;
+  }
+
+  .level {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 4px;
+  }
+
+  @media (max-width: 1000px) {
+    .contacts-list{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+</style>
+
+
+
+

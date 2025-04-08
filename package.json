@@ -1,0 +1,24 @@
+{
+  "name": "el_meu_projecte",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.4.1",
+    "flowbite-react": "^0.11.7",
+    "git": "^0.1.5"
+  },
+  "description": "```sh npm create astro@latest -- --template basics ```",
+  "main": "index.js",
+  "devDependencies": {
+    "parcel": "^2.14.4"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

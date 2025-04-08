@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/nav.astro';
+import Footer from '../components/footer.astro';
+import Titol from "../components/Titol.astro";
+import Experiencia from "../components/experiencia.astro";
+import Idiomas from "../components/idiomas.astro";
+import Educacio from "../components/educacio.astro";
+import Skills from "../components/skills.astro";
+
+import cvData from "../data/cv.json";
+const {experience} = cvData;
+const {languages} = cvData;
+const {education} = cvData;
+const {skills} = cvData;
+
+---
+
+<Layout>
+  <Nav />
+  <Titol text="INFORMACIÓ" />
+  <Experiencia experience={experience} />
+  <Skills />
+  <Idiomas languages={languages} /> 
+  <Educacio education={education} /> 
+  <Footer />
+</Layout>
+
