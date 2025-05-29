@@ -1,39 +1,38 @@
 ---
-
-import cv from '../data/cv.json';
+import cv from "../data/cv.json";
 const projects = cv.projects;
 ---
 
 <section>
   <div class="contenedor">
-    <h2 style="font-size: 24px; font-weight: bold; margin-top: 10%;">Personal Projects</h2>
-  <p style="color: #666;">Below is a selection of recent projects that I've worked on.</p>
-  </div>
-  
-  <div class="projects-grid">
-    {projects.map((project) => (
-      <a
-            class="project-card"
-            href={`${project.url}`}
-          >
-        <img src={project.image} />
-        <div class="project-info">
-          <h3>{project.name}</h3>
-          <p>{project.description}</p>
-        </div>
-      </a>
-    ))}
+    <h2 style="font-size: 24px; font-weight: bold; margin-top: 10%;">
+      Personal Projects
+    </h2>
+    <p style="color: #666;">
+      Below is a selection of recent projects that I've worked on.
+    </p>
   </div>
 
+  <div class="projects-grid">
+    {
+      projects.map((project) => (
+        <a class="project-card" href={`${project.url}`}>
+          <picture>
+            <source srcset={project.image} type="image/webp" />
+            <img src={project.image} alt={project.name} />
+          </picture>
+          <div class="project-info">
+            <h3>{project.name}</h3>
+            <p>{project.description}</p>
+          </div>
+        </a>
+      ))
+    }
+  </div>
 </section>
 
-  
-  
-
-
-
 <style>
-  .contenedor{
+  .contenedor {
     gap: 24px;
     width: 80%;
     margin: 0 auto;
@@ -64,7 +63,7 @@ const projects = cv.projects;
 
   .project-info {
     padding: 20px;
-    text-decoration: none; 
+    text-decoration: none;
   }
 
   .project-info h3 {
@@ -72,21 +71,20 @@ const projects = cv.projects;
     margin-bottom: 10px;
     font-family: sans-serif;
     color: black;
-    text-decoration: none; 
+    text-decoration: none;
   }
 
   .project-info p {
     color: #666;
     font-size: 14px;
     font-family: sans-serif;
-    text-decoration: none; 
+    text-decoration: none;
   }
 
   @media (max-width: 1000px) {
-    .projects-grid{
+    .projects-grid {
       display: flex;
       flex-direction: column;
     }
   }
- 
 </style>

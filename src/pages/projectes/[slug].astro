@@ -1,25 +1,20 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Nav from '../../components/nav.astro';
-import Titol from '../../components/Titol.astro';
-import Footer from '../../components/footer.astro';
-import cvdata from '../../data/cv.json';
-
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../../components/nav.astro";
+import Titol from "../../components/Titol.astro";
+import Footer from "../../components/footer.astro";
+import cvdata from "../../data/cv.json";
 
 export async function getStaticPaths() {
- 
   const paths = cvdata.projects.map((project) => ({
-    params: { slug: project.slug }, 
+    params: { slug: project.slug },
   }));
   return paths;
 }
 
 const { slug } = Astro.params;
 
-const project = cvdata.projects.find(
-  (project) => project.slug === slug
-);
-
+const project = cvdata.projects.find((project) => project.slug === slug);
 
 if (!project) {
   throw new Error("Projecte no trobat");
@@ -27,27 +22,38 @@ if (!project) {
 ---
 
 <Layout>
-  <Nav/>
+  <Nav />
   <div class="project">
     <h1>{project.name}</h1>
     <img class="image" src={project.image} />
+    <figcaption class="image-license">
+      Imatge amb llicència <a
+        href="https://creativecommons.org/licenses/by-sa/4.0/"
+        target="_blank"
+        rel="noopener noreferrer">CC BY-SA 4.0</a
+      >
+    </figcaption>
     <p>{project.description}</p>
+    <p>{project.objectiu}</p>
+    <p>{project.eines}</p>
+    <p>{project.rep}</p>
+    <video src="/public/images/video.mp4" autoplay loop muted playsinline
+    ></video>
   </div>
   <Footer />
 </Layout>
 
 <style>
-
-    .project{
+  .project {
     font-family: sans-serif;
-      width: 70%;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-    }
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 
-    .image{
-        width: 400px;
-        height: 300px;
-    }
+  .image {
+    width: 400px;
+    height: 300px;
+  }
 </style>

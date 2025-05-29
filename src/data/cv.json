@@ -11,12 +11,27 @@
         "github": "https://github.com/HelenaLM32/Portfoli"
     },
     "skills": [
-        "JavaScript", "TypeScript", "React", "Astro", "Vue.js",
-        "Node.js", "Express.js", "MongoDB", "PostgreSQL",
-        "HTML", "CSS", "SASS", "TailwindCSS", "Bootstrap",
-        "Git", "Docker", "CI/CD", "Testing (Jest, Cypress)"
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Astro",
+        "Vue.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "PostgreSQL",
+        "HTML",
+        "CSS",
+        "SASS",
+        "TailwindCSS",
+        "Bootstrap",
+        "Git",
+        "Docker",
+        "CI/CD",
+        "Testing (Jest, Cypress)"
     ],
-    "experience": [{
+    "experience": [
+        {
             "position": "Desenvolupador Full Stack",
             "company": "TechSolutions",
             "location": "Barcelona, Catalunya",
@@ -28,7 +43,6 @@
                 "Integració d'APIs REST i GraphQL.",
                 "Millora del rendiment i accessibilitat de les aplicacions."
             ]
-            
         },
         {
             "position": "Desenvolupador Frontend",
@@ -56,7 +70,8 @@
             ]
         }
     ],
-    "education": [{
+    "education": [
+        {
             "degree": "FP de Desenvolupament d'Aplicacions Web",
             "institution": "FP Núria",
             "year": "2012 - 2014",
@@ -70,45 +85,69 @@
         }
     ],
     "languages": [
-        { "language": "Català", "level": "Natiu", "image": "https://www.grupomastergrafic.net/WebRoot/StoreES3/Shops/64667427/5655/FF93/FE2F/8872/D2DC/C0A8/2AB9/E062/2000px-Flag_of_Catalonia.svg_.png" },
-        { "language": "Espanyol", "level": "Natiu", "image": "https://cdn.pixabay.com/photo/2012/04/16/12/06/flag-35697_960_720.png" },
-        { "language": "Anglès", "level": "Avançat", "image": "https://images.creativemarket.com/0.1.0/ps/1822915/6793/3682/m1/fpnw/wm1/british-flag-.jpg?1477811604&s=392fc272ec4e558e1e9f3b7dea190f2f" }
+        {
+            "language": "Català",
+            "level": "Natiu",
+            "image": "https://www.grupomastergrafic.net/WebRoot/StoreES3/Shops/64667427/5655/FF93/FE2F/8872/D2DC/C0A8/2AB9/E062/2000px-Flag_of_Catalonia.svg_.png"
+        },
+        {
+            "language": "Espanyol",
+            "level": "Natiu",
+            "image": "https://cdn.pixabay.com/photo/2012/04/16/12/06/flag-35697_960_720.png"
+        },
+        {
+            "language": "Anglès",
+            "level": "Avançat",
+            "image": "https://images.creativemarket.com/0.1.0/ps/1822915/6793/3682/m1/fpnw/wm1/british-flag-.jpg?1477811604&s=392fc272ec4e558e1e9f3b7dea190f2f"
+        }
     ],
     "projects": [
-    {
-      "id": "1",
-      "name": "TaskManager App",
-      "description": "Aplicació de gestió de tasques amb React i Firebase.",
-      "url": "https://taskmanager.dev",
-      "image": "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg",
-      "slug": "Taskmanager-app"
-    },
-    {
-      "id": "2",
-      "name": "E-commerce Platform",
-      "description": "Plataforma de comerç electrònic desenvolupada amb Vue.js i Node.js.",
-      "url": "https://ecommerce.example.com",
-      "image": "https://images.pexels.com/photos/2265482/pexels-photo-2265482.jpeg",
-      "slug": "Ecommerce-platform"
-    },
-    {
-      "id": "3",
-      "name": "Blog CMS",
-      "description": "Sistema de gestió de continguts per blogs amb Astro i Markdown.",
-      "url": "https://blogcms.dev",
-      "image": "https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg",
-      "slug": "Blog-cms"
-    },
-    {
-      "id": "4",
-      "name": "Fitness Tracker",
-      "description": "Aplicació per monitoritzar entrenaments i progrés físic.",
-      "url": "https://fitnesstracker.dev",
-      "image": "https://images.pexels.com/photos/2261477/pexels-photo-2261477.jpeg",
-      "slug": "Fitness-tracker"
-    }
-  ],
-    "blog_posts": [{
+        {
+            "id": "1",
+            "name": "TaskManager App",
+            "description": "Aplicació de gestió de tasques amb React i Firebase.",
+            "url": "https://taskmanager.dev",
+            "image": "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg",
+            "slug": "Taskmanager-app"
+        },
+        {
+            "id": "2",
+            "name": "E-commerce Platform",
+            "description": "Plataforma de comerç electrònic desenvolupada amb Vue.js i Node.js.",
+            "url": "https://ecommerce.example.com",
+            "image": "https://images.pexels.com/photos/2265482/pexels-photo-2265482.jpeg",
+            "slug": "Ecommerce-platform"
+        },
+        {
+            "id": "3",
+            "name": "Blog CMS",
+            "description": "Sistema de gestió de continguts per blogs amb Astro i Markdown.",
+            "url": "https://blogcms.dev",
+            "image": "https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg",
+            "slug": "Blog-cms"
+        },
+        {
+            "id": "4",
+            "name": "Fitness Tracker",
+            "description": "Aplicació per monitoritzar entrenaments i progrés físic.",
+            "url": "https://fitnesstracker.dev",
+            "image": "https://images.pexels.com/photos/2261477/pexels-photo-2261477.jpeg",
+            "slug": "Fitness-tracker"
+        },
+        {
+            "id": "5",
+            "name": "Quantum Charge",
+            "description": "Aplicació de begudes QUANTUMCHARGE",
+            "url": "https://quantumcharge.dev",
+            "image": "/public/images/1.webp",
+            "slug": "quantumcharge",
+            "objectiu": "OBJECTIU: Crear una pàgina web moderna i visualment impactant per promocionar QUANTUMCHARGE, una beguda energètica pensada per a persones actives i creatives. L'objectiu és transmetre energia, velocitat i modernitat, combinant una estètica potent amb una navegació clara i funcional. La web ha estat dissenyada amb HTML i CSS purs, amb un enfocament responsive per adaptar-se a tot tipus de dispositius.",
+            "eines": "EINES UTILITZADES: HTML5 per estructurar correctament el contingut de la pàgina. CSS3 per estilitzar els elements, aplicant gradients, animacions i disseny responsive. Figma per fer esbossos previs del disseny visual i jerarquia de continguts. Eina de generació d’imatges Midjourney per crear imatges impactants del producte, fons abstractes amb energia visual i escenes publicitàries amb estil modern i futurista. Coolors per definir una paleta cromàtica que evoqui energia, força i dinamisme.",
+            "rep": "REPTE TÈCNIC: El principal repte va ser integrar imatges generades per IA amb una qualitat visual alta dins d’un entorn HTML/CSS lleuger i ràpid de carregar. També es va treballar en mantenir una coherència visual entre totes les imatges generades, optimitzar els fitxers d’imatge per a web sense perdre qualitat, aplicar efectes CSS (hover, transicions, animacions) per donar vida als elements sense recórrer a JavaScript, i assegurar una accessibilitat bàsica (text alternatiu a imatges, contrastos adequats, etc.)."
+        }
+    ],
+    "blog_posts": [
+        {
             "title": "Optimització de React: Com millorar el rendiment de la teva aplicació",
             "summary": "Explorem tècniques com memoization, lazy loading i code splitting per optimitzar aplicacions React.",
             "date": "15-02-2024"
